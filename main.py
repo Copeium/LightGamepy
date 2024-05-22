@@ -64,8 +64,8 @@ class Wire:
         return self.rect.collidepoint(pygame.mouse.get_pos())
     
     def rotate(self):
-        self.up, self.left, self.down, self.right = self.right, self.up, self.left, self.down
-        self.rot = (self.rot + 1) % 4
+        self.up, self.left, self.down, self.right = self.left, self.down, self.right, self.up
+        self.rot = (self.rot - 1) % 4
     
     #Only called on mouse up event
     def handle_click(self):
